@@ -18,7 +18,7 @@ body, html {
 <body>
 <div class="dropdown" id="dropdown">
   <div class="dropdown" >
-    <button onclick="myFunction()" class="dropbtn">View Icons</button>
+    <button onclick="myFunction()" class="dropbtn">ICON MENU</button>
     <div id="myDropdown" class="dropdown-content">
       <a href="#schizophrenia" style="color:#ACB8C5;">SCHIZOPHRENIA</a>
       <a href="#ocd" style="color:#DB9E74;">OCD</a>
@@ -36,7 +36,11 @@ body, html {
   </div>
 
   <div class="dropdown">
-    <button class="dropbtn"><a href="#download" style="color: white;", style="text-decoration: none;">Download</a></button>
+    <div class="animatedParent">
+    <div class="slower animated tada">
+      <button class="dropbtndl"><a href="#download" style=""><h6>Download</h6></a></button>
+    </div>
+    </div>
   </div>
 
 </div>
@@ -192,6 +196,10 @@ body, html {
 
   </div>
   </div>
+</div>
+
+<div class="yellow2">
+<h2><div class="left">Send digital love and support</div> </h2>
 </div>
 
 <div class="white">
@@ -556,14 +564,22 @@ Mania – feeling very high and overactive (less severe mania is known as hypoma
 </div>
 <div class="download">
     <a name="download"></a>
-     <h2 style="font-size: 5em;">DOWNLOAD</h2>
+    <div class="animatedParent">
+    <div class="animated tada">
+      <h2 style="font-size: 5em;">DOWNLOAD</h2>
+    </div>
+  </div>
      <h5>Awright awright, slow down Partner. <br></br>Which bounty will you be taking home?
      </h5>
+     <div class="animatedParent animateOnce">
+     <div class="animated growIn">
      <div class="flex-container">
-       <div><h3>JPEG</h3><p>No way, you're Steve Jobs time travelling from the 80s?! This is an ancient standard. Don't recommend.</p></div>
+       <div ><h3>JPEG</h3><p>No way, you're Steve Jobs time travelling from the 80s?! This is an ancient standard. Don't recommend.</p></div>
        <div><h3>PNG</h3><p>Ah, you want to raise awareness? This is the standard extension for images on the web.</p></div>
        <div><h3>SVG</h3><p>So you're a professional, huh? Make the icons as big or as small as you want without losing quality.
        </p></div>
+     </div>
+     </div>
     </div>
 </div>
 
@@ -611,10 +627,38 @@ function stickymenu() {
 
 </script>
 
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="aos/js/css3-animate-it.js"></script>
 <script src="jquery-3.3.1.js"></script>
 <script src="javascript.js"></script>
 <script src="jquery-ui"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </body>

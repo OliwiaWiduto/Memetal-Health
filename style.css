@@ -3,6 +3,7 @@ body, html {
     background-color: white;
     height: 100vh;
     padding: 0;
+    scroll-behavior: smooth;
 
 }
 
@@ -57,6 +58,12 @@ h5{
   margin: 0;
   padding: 1em;
 }
+h6{
+  font-family: cubano;
+  font-size: 20px;
+  color: white;
+  margin: 0.35em;;
+}
 
 p{
   font-family: VAG Rundschrift D;
@@ -81,8 +88,31 @@ p{
   box-shadow: 0px 8px 16px px rgba(0,0,0,0.1);
 }
 
+.dropbtndl{
+  border-radius: 5px;
+  background-color: #E0AD04;
+  padding: 0.7em 0.9em;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 8px 16px px rgba(0,0,0,0.1);
+}
+
 .dropbtn:hover, .dropbtn:focus {
   background-color: #C79A08;
+}
+
+.dropbtndl a{
+  color: white;
+  text-decoration:none;
+}
+.dropbtndl a:hover {
+  background-color: #C79A08;
+  text-decoration:none;
+}
+
+.dropbtndl:hover, .dropbtndl:focus {
+  background-color: #C79A08;
+  text-decoration:none;
 }
 
 .dropdown {
@@ -127,8 +157,9 @@ p{
 .sticky {
   float: right;
   position: fixed;
-  margin-right: 1em;
-  margin-top: 0em;
+  /* margin-right: 2em; */
+  /* margin-top: 1em; */
+  right: 0;
   width: 100vw;
 }
 
@@ -137,6 +168,13 @@ p{
   padding-top: 0px;
 }
 
+.sticky + .grid-container {
+  padding-top: 68px;
+}
+
+body {
+  overflow-x:hidden;
+}
 
 .grid-container {
   z-index: 0;
@@ -151,7 +189,7 @@ p{
 
 .heading {
   padding:0;
-  margin: 8em 0em 0em 8em;
+  margin: 2em 0em 0em 8em;
 }
 .heading H3{
   padding:0;
@@ -168,6 +206,27 @@ p{
   position: relative;
 }
 
+.yellow2{
+  z-index: 1;
+  background-color: #FFC400;
+  height: 70vh;
+  width: 100vw;
+  line-height: 70vh;
+  text-align: left;
+  position: relative;
+  margin: 10vw 0 0 0;
+}
+
+.left{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  text-align: left;
+  width: 25vw;
+  padding: 0;
+  margin: 0 0 0 10vw;
+}
+
 .center{
   display: inline-block;
   vertical-align: middle;
@@ -175,7 +234,7 @@ p{
   text-align: center;
   width: 50vw;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .white{
@@ -348,12 +407,15 @@ justify-self: end;
   padding: 2em;
   margin: 1em;
   text-align: center;
+  border: solid 3px white;
+  transition: transform .25s;
 }
 
 .flex-container > div:hover {
   background-color: #;
   border: dotted 3px #B26453;
-  animation: shake 1.5s;
+
+  transform: scale(1.4);
 
 }
 
