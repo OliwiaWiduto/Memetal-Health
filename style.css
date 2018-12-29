@@ -4,7 +4,7 @@ body, html {
     height: 100vh;
     padding: 0;
     scroll-behavior: smooth;
-
+  overflow x: hidden;
 }
 
 h1 {
@@ -19,8 +19,8 @@ line-height: 80px;
 }
 
 h2{
-  font-family: cubano, sans-serif;
-  font-size: 3em;
+  font-family: cubano;
+  font-size: 50px;
   font-weight: 400;
   font-style: normal;
   color: white;
@@ -39,7 +39,7 @@ h3{
 }
 
 h4{
-  font-family: VAG Rundschrift D;
+  font-family: VAG Rundschrift D, Calibri;
   font-weight: 400;
   font-size: 1.2em;
   font-style: normal;
@@ -49,7 +49,7 @@ h4{
   max-width: 40vw;
 }
 h5{
-  font-family: VAG Rundschrift D;
+  font-family: VAG Rundschrift D, Calibri;
   line-height: 0.8em;
   font-size: 1.2em;
   font-weight: 400;
@@ -60,13 +60,14 @@ h5{
 }
 h6{
   font-family: cubano;
+  font-weight: 400;
   font-size: 20px;
   color: white;
   margin: 0.35em;;
 }
 
 p{
-  font-family: VAG Rundschrift D;
+  font-family: VAG Rundschrift D, Calibri;
   font-weight: 400;
   font-size: 14px;
   color: #979389;
@@ -127,7 +128,7 @@ p{
 .dropdown-content {
   margin: 0.5em 2em 0 0;
   text-align: left;
-  font-family: VAG Rundschrift D;
+  font-family: VAG Rundschrift D, Calibri;
   font-weight: bold;
   display: none;
   position: absolute;
@@ -206,27 +207,6 @@ body {
   position: relative;
 }
 
-.yellow2{
-  z-index: 1;
-  background-color: #FFC400;
-  height: 70vh;
-  width: 100vw;
-  line-height: 70vh;
-  text-align: left;
-  position: relative;
-  margin: 10vw 0 0 0;
-}
-
-.left{
-  display: inline-block;
-  vertical-align: middle;
-  line-height: normal;
-  text-align: left;
-  width: 25vw;
-  padding: 0;
-  margin: 0 0 0 10vw;
-}
-
 .center{
   display: inline-block;
   vertical-align: middle;
@@ -235,6 +215,24 @@ body {
   width: 50vw;
   padding: 0;
   margin: 0;
+}
+
+.two-item-grid-container {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  background-color: #FFCE55;
+  padding: 0;
+  margin: 15vh 0 0 0;
+align-items: center;
+}
+
+.two-item-grid-item{
+ text-align: center;
+ margin: 7vh;
+}
+
+.two-item-grid-item img{
+height:
 }
 
 .white{
@@ -418,6 +416,54 @@ justify-self: end;
   transform: scale(1.4);
 
 }
+.quiz {
+    padding-top: 15vh;
+    text-align: center;
+    z-index: 1;
+    background-color: white;
+    width: 100vw;
+    position: relative;
+}
+
+.quiz h3 {
+  color: #707070;
+  font-size: 1.5em;
+
+}
+
+.quiz-container {
+  margin: 0 20vw 0 20vw;
+  padding-top: 3vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.quiz-container a{
+  text-decoration: none;
+}
+
+.quiz-item {
+  height: 15vw;
+  width: 15vw;
+  line-height: 15vw;
+  margin: 2.5vw;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.quiz-item:hover{
+  height: 15vw;
+  width: 15vw;
+  line-height: 15vw;
+  margin: 2.5vw;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 
 @keyframes shake {
 10%, 90% {
@@ -659,7 +705,7 @@ justify-self: end;
 
     height: 200px;
 	position: fixed;
-	width: 200px;
+	width: 7em;
 }
 
 .bubble:after {
