@@ -51,12 +51,13 @@ h4{
 h5{
   font-family: VAG Rundschrift D, Calibri;
   line-height: 0.8em;
-  font-size: 1.2em;
+  font-size: 20px;
   font-weight: 400;
   font-style: normal;
   color: white;
   margin: 0;
   padding: 1em;
+  padding-top: 1.5em;
 }
 h6{
   font-family: cubano;
@@ -392,6 +393,35 @@ justify-self: end;
   margin: 12vh 0 0 0;
 }
 
+.download a {
+  text-decoration: none;
+}
+
+.dlbutton {
+  font-family: cubano;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #EB6748;
+  color: white;
+  padding: 0.7em 0.9em;
+  margin-top: 1.5em;
+  border: 2px solid #EB6748;
+  cursor: pointer;
+  box-shadow: 0px 8px 16px px rgba(0,0,0,0.1);
+}
+
+.dlbutton:hover, .dlbutton:focus {
+  background-color: white;
+  color: #EB6748;
+  border: 2px solid #EB6748;
+  text-decoration:none;
+}
+
+.dlbutton a{
+  color: white;
+  text-decoration:none;
+}
+
 .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -411,7 +441,7 @@ justify-self: end;
 
 .flex-container > div:hover {
   background-color: #;
-  border: dotted 3px #B26453;
+  border: dotted 3px #DEAC05;
 
   transform: scale(1.4);
 
@@ -433,7 +463,7 @@ justify-self: end;
 
 .quiz-container {
   margin: 0 20vw 0 20vw;
-  padding-top: 3vh;
+  padding-top: 0vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
@@ -447,21 +477,32 @@ justify-self: end;
 .quiz-item {
   height: 15vw;
   width: 15vw;
-  line-height: 15vw;
   margin: 2.5vw;
   text-align: center;
   border-radius: 10px;
   overflow: hidden;
+  transition: transform .2s;
+  border: solid 3px white;
+}
+
+.quiz-item h3 {
+    margin-top: 4vw;
+    padding: 0.5vw 3vw 0 3vw;
+}
+
+.quiz-item p {
+    padding: 0.5vw 1.5vw 0 1.5vw;
 }
 
 .quiz-item:hover{
   height: 15vw;
   width: 15vw;
-  line-height: 15vw;
   margin: 2.5vw;
   text-align: center;
   border-radius: 10px;
   overflow: hidden;
+  transform: scale(1.4);
+  border: dotted 3px #707070;
 }
 
 
@@ -720,4 +761,90 @@ justify-self: end;
 	left: 100px;
 	position: absolute;
 	width: 180px;
+}
+
+.footer {
+   margin-top: 7em;
+   left: 0;
+   padding: 1em 0 0 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #FFCE55;
+   color: white;
+   text-align: left;
+}
+.footerright {
+ text-align: right;
+}
+
+.footerleft{
+   text-align: left;
+}
+
+.flex-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.flex-container2 > div {
+  border-radius: 5px;
+  width: 25vw;
+  padding: 0;
+  margin: 2.5vw;
+}
+
+.flex-container2 h4 {
+  color: #707070;
+  margin-bottom: 0.5em;
+  max-width: 100vw;
+}
+
+.flex-container2 p{
+      color: #707070;
+    }
+
+.footer a{
+  color: #707070;
+}
+
+@media only screen and (max-width: 1000px) {
+  .quiz-item {
+    line-height: 15vw;
+  }
+
+  .quiz-item h3 {
+      margin-top: 0vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .quiz-item h3 {
+      margin-top: 0vw;
+      font-size: 0.8em;
+
+  }
+
+  .flex-container2 > div {
+    width: 70vw;
+    text-align:center;
+  }
+
+  .flex-container2 p{
+      max-width: 100vw;}
+
+.grid-container{
+height: 34vh;
+}
+
+.yellow{
+  height: 35vh;
+line-height: 35vh;
+}
+
+.download {
+  padding: 7vh 0 7vh 0;
+}
+
 }
